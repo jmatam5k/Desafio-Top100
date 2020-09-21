@@ -14,3 +14,6 @@ CREATE TABLE reparto(id SERIAL, id_pelicula INT, actor VARCHAR(30), FOREIGN KEY 
 --4. Listar todos los actores que aparecen en la película "Titanic", indicando el título de la película,
 --año de estreno, director y todo el reparto. (0.5 puntos)
 SELECT * FROM peliculas INNER JOIN reparto ON peliculas.id = reparto.id_pelicula WHERE pelicula = 'Titanic';
+
+-- 5. Listar los titulos de las películas donde actúe Harrison Ford.
+SELECT pelicula FROM peliculas JOIN reparto ON peliculas.id = reparto.id_pelicula WHERE actor = 'Harrison Ford';
